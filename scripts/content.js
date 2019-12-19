@@ -3,8 +3,7 @@ function addShortcuts() {
     if (typeof shortcut !== 'undefined') {
         (function init_setting() {
             shortcut.add("Shift+d",function() {
-                // ida: setting, id4e: delete
-                document.getElementById('id4e').click();
+                $('input[type="button"][value="Delete"]').click();
             },{
             'disable_in_input':false,
             'type':'keydown',
