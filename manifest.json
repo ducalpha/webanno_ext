@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "WebAnno shortcuts",
+    "description": "This Chrome extension adds enhancements (e.g., shortcuts) to WebAnno.",
+    "version": "0.1",
+    "homepage_url": "https://github.com/ducalpha/webanno_shortcuts",
+    "browser_action": {
+        "default_icon": "favicon.png",
+        "default_popup": "popup.html",
+        "default_title": "WebAnno Shortcuts"
+    },
+    "content_scripts": [{
+        "matches": ["https://*/annotation.html*"],
+        "all_frames": true,
+        "js":      ["scripts/content.js"]
+    }],
+    "permissions": [
+        "activeTab"
+    ],
+    "content_security_policy": "script-src 'self' ; object-src 'self' "
+}
+
